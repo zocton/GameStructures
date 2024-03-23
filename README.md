@@ -1,5 +1,6 @@
 # GameStructures
  A collection of useful game development data structures.
+ > :memo: **Note:** Built using .NET 8.
  ## Usage
   ### Release
    To include in your project see releases. Once a release is downloaded just include the DLL in your project's dependencies list.
