@@ -7,7 +7,7 @@ public class PriorityQueue<T>
 
     public class PriorityQueueException : Exception
     {
-        public override string Message => base.Message + $"{Environment.NewLine} Attempting to dequeue an empty PriorityQueue.";
+        public override string Message => base.Message + $"{Environment.NewLine}Attempting to dequeue an empty PriorityQueue.";
     }
 
     internal struct PQItem
@@ -31,22 +31,15 @@ public class PriorityQueue<T>
     {
         Count++;
 
-        if (_list.Count == 0)
-        {
-            _list.Add(new(element, priority));
-            return;
-        }
-
         _list.Add(new(element, priority));
-        var ordered = _list.OrderByDescending(value => value.Priority);
-        _queue = new Queue<PQItem>(ordered);
+        _queue = new Queue<PQItem>(_list.OrderByDescending(value => value.Priority));
     }
 
     public T? Dequeue()
     {
         if (Count == 0)
         {
-            return default;
+            throw new PriorityQueueException();
         }
 
         Count--;
