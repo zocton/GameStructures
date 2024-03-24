@@ -10,6 +10,7 @@
   ### Priority Queue
    A generic queue that assigns a priority to an element. It is commonly used for pathfinding over graph structures. Currently supports both enqueuing and dequeuing as well as peeking the next element.
    #### Example snippets
+   ```cs
     PriorityQueue<string> queue = new PriorityQueue<string>();
     queue.Enqueue("Hello", 4);
     queue.Enqueue("PriorityQueue.", 1);
@@ -27,3 +28,4 @@
      * Hello world! This is a PriorityQueue.
      *
      */
+   ```
