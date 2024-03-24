@@ -4,36 +4,34 @@ Console.Title = "Game Structures Test App";
 Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine("Testing GameStructures.PriorityQueue...");
 
-PriorityQueue<string> nameQueue = new PriorityQueue<string>();
+PriorityQueue<string> priorityQueue = new PriorityQueue<string>();
 
-nameQueue.Enqueue("Very Low", 0);
-nameQueue.Enqueue("Very High", 10);
-nameQueue.Enqueue("Medium", 7);
-nameQueue.Enqueue("High", 9);
-nameQueue.Enqueue("Low", 3);
+priorityQueue.Enqueue("Hello", 4);
+priorityQueue.Enqueue($"PriorityQueue.{Environment.NewLine}", 1);
+priorityQueue.Enqueue(" This is a ", 2);
+priorityQueue.Enqueue(" world!", 3);
 
 
-Console.WriteLine($"{Environment.NewLine}Dequeue using while Peek is not null:{Environment.NewLine}");
+Console.WriteLine($"{Environment.NewLine}Dequeue using while Peek is not null:");
 Console.ForegroundColor = ConsoleColor.DarkGray;
 
-while (nameQueue.Peek() is not null)
+while (priorityQueue.Peek() is not null)
 {
-    Console.WriteLine(nameQueue.Dequeue());
+    Console.Write(priorityQueue.Dequeue());
 }
 
-nameQueue.Enqueue("Very Low", 0);
-nameQueue.Enqueue("Very High", 10);
-nameQueue.Enqueue("Medium", 7);
-nameQueue.Enqueue("High", 9);
-nameQueue.Enqueue("Low", 3);
+priorityQueue.Enqueue("Hello", 4);
+priorityQueue.Enqueue($"PriorityQueue.{Environment.NewLine}", 1);
+priorityQueue.Enqueue(" This is a ", 2);
+priorityQueue.Enqueue(" world!", 3);
 
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine($"{Environment.NewLine}Dequeue using while reverse for:{Environment.NewLine}");
+Console.WriteLine($"{Environment.NewLine}Dequeue using while reverse for:");
 Console.ForegroundColor = ConsoleColor.DarkGray;
 
-for (var i = nameQueue.Count; i > 0; i--)
+for (var i = priorityQueue.Count; i > 0; i--)
 {
-    Console.WriteLine(nameQueue.Dequeue());
+    Console.Write(priorityQueue.Dequeue());
 }
 
 Console.ForegroundColor = ConsoleColor.Green;
