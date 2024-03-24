@@ -3,7 +3,7 @@
  > :memo: **Note:** Built using [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
  ## Usage
   ### Release
-   To include in your project see releases. Once a release is downloaded just include the DLL in your project's dependencies list.
+   To include in your project see the [Latest Release](https://github.com/zocton/GameStructures/releases/latest). Once a release is downloaded just include the DLL in your project's dependencies list.
   ### Source
    Want to view source and run the test app? Just clone or download the repo and run [GenerateSolution.ps1](/GenerateSolution.ps1).
  ## List of Structures
